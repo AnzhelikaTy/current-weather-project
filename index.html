@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/34675bc6d2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Padauk:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <div class="row g-1 justify-content-center">
+                    <nav class="navbar navbar-light justify-content-center">
+                        <form class="form-inline" id="button-change-city">
+                            <div class="col"> <input class="form-control mr-sm-2" type="search"
+                                    placeholder="Enter city..." id="search-text-input" aria-label="Search" autofocus>
+                            </div>
+                            <div class="col"><button class="btn btn-primary my-2 my-sm-0" type="submit"
+                                    id="location">Search</button></div>
+
+                            <div class="col"><button id="current-button" type="button" class="btn btn-light">
+                                    <i class="fa-solid fa-location-arrow"></i>
+                                </button></div>
+
+                        </form>
+                    </nav>
+                </div>
+                <div class="time" id="current-time">Sunday 14:55</div><br />
+                <h1 id="current-city">
+                    What's the weather? 💭
+                </h1>
+
+                <div class="temperature">
+                    <span class="temp" id="current-temperature">t°C</span>
+                </div>
+                <div class="conditions-information">
+                    <span class="conditions" id="current-condition">Let's see the weather conditions...</span><br />
+                    <span class="feelsLike" id="current-feels-like">Feels like❔</span><br />
+                    <span class="humidity" id="current-humidity">Humidity💧</span><br />
+                    <span class="wind" id="current-wind">Wind 🌬️</span>
+
+                </div>
+
+                <p class="hourly-forecast">🕒 today</p>
+                <hr>
+                <div class="row">
+                    <div class="col">Now</div>
+                    <div class="col">16</div>
+                    <div class="col">17</div>
+                    <div class="col">18:33</div>
+                    <div class="col">19</div>
+                </div>
+                <div class="row">
+
+                    <div class="col"><i class="fa-solid fa-cloud-sun hourly-cloud-sun"></i></div>
+                    <div class="col"><i class="fa-regular fa-sun hourly-sun"></i></div>
+                    <div class="col"><i class="fa-solid fa-cloud-bolt hourly-cloud-bolt"></i></div>
+                    <div class="col"><i class="fa-solid fa-sun hourly-sun"></i></div>
+                    <div class="col"><i class="fa-solid fa-cloud hourly-cloud"></i></div>
+                </div>
+                <div class="row">
+
+                    <div class="col">27°</div>
+                    <div class="col">25°</div>
+                    <div class="col">23°</div>
+                    <div class="col">Sunset</div>
+                    <div class="col">22°</div>
+                </div>
+            </div>
+            <div class="week col">
+
+                <div class="week-day">
+                    <div class="row">
+                        <div class="col day">Tomorrow
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-right"><i class="fa-solid fa-cloud-sun icon"></i></div>
+                        <div class="col text-left"><strong>33°</strong>/ 27°</div>
+                    </div>
+                </div>
+                <br />
+                <div class="week-day">
+                    <div class="row">
+                        <div class="col day">Tuesday
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-right"><i class="fa-regular fa-sun sun"></i></div>
+                        <div class="col text-left"><strong>33°</strong>/ 27°</div>
+
+                    </div>
+                </div>
+                <br />
+                <div class="week-day">
+                    <div class="row">
+                        <div class="col day">Wednesday
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-right"><i class="fa-solid fa-cloud-sun icon"></i></div>
+                        <div class="col text-left"><strong>33°</strong>/ 27°</div>
+                    </div>
+                </div>
+                <br />
+                <div class="week-day">
+                    <div class="row">
+                        <div class="col day">Thursday
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-right"><i class="fa-solid fa-cloud-sun icon"></i></div>
+                        <div class="col text-left"><strong>33°</strong>/ 27°</div>
+                    </div>
+                </div>
+                <br />
+                <div class="week-day">
+                    <div class="row">
+                        <div class="col day">Friday
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col text-right"><i class="fa-solid fa-cloud-bolt icon"></i></div>
+                        <div class="col text-left"><strong>33°</strong>/ 27°</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <footer>Created by <strong>Anzhelika Susemcik</strong></footer>
+    <script src="src/script.js"></script>
+</body>
+
+</html>

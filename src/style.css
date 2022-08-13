@@ -1,0 +1,123 @@
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+div.container {
+  border: 1px solid transparent;
+  box-shadow: 5px 10px 20px #6285ae;
+  border-radius: 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 980px;
+  height: 680px;
+  margin: 10px auto;
+  background: linear-gradient(
+    111.5deg,
+    rgb(228, 247, 255) 21.9%,
+    rgb(255, 216, 194) 92.2%
+  );
+}
+.navbar {
+  margin: 50px 0;
+}
+.time {
+  font-family: "Padauk", sans-serif;
+  font-size: 18px;
+}
+#current-city {
+  text-align: center;
+  color: rgb(28, 28, 77);
+  font-family: "Padauk", sans-serif;
+  font-weight: bold;
+}
+div.form-group {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+div.temperature {
+  text-align: center;
+  opacity: 0.8;
+  color: rgb(7, 7, 77);
+  font-family: "Padauk", sans-serif;
+  font-size: 50px;
+}
+
+.conditions-information {
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+  font-family: "Rubik", sans-serif;
+}
+.hourly-forecast {
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 60px;
+  font-family: "Padauk", sans-serif;
+  font-weight: bold;
+}
+
+.hourly-cloud-sun,
+.hourly-cloud-bolt,
+.hourly-cloud {
+  font-size: 25px;
+  color: #007bff;
+}
+.hourly-sun {
+  color: rgb(215, 188, 54);
+  font-size: 25px;
+}
+
+.week {
+  border: 1px solid transparent;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.day {
+  text-transform: uppercase;
+  font-family: "Padauk", sans-serif;
+  font-weight: bold;
+}
+.row {
+  text-align: center;
+  font-family: "Padauk", sans-serif;
+}
+
+.sun {
+  color: rgb(215, 188, 54);
+  font-size: 40px;
+}
+.icon {
+  color: #007bff;
+  font-size: 40px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-family: "PT Mono", monospace;
+  font-size: 18px;
+}
+.week {
+  display: grid;
+  row-gap: 10px;
+}
+.week-day:hover {
+  background: whitesmoke;
+  color: black;
+  border-radius: 20px;
+  transition: all 200ms ease-in-out;
+  cursor: pointer;
+}
