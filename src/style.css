@@ -6,7 +6,10 @@ body::before {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/043/539/original/sky_background.jpg?1660430545");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 div.container {
@@ -19,11 +22,12 @@ div.container {
   width: 980px;
   height: 680px;
   margin: 10px auto;
-  background: linear-gradient(
-    111.5deg,
-    rgb(228, 247, 255) 21.9%,
-    rgb(255, 216, 194) 92.2%
+  background: radial-gradient(
+    circle at 0.4% -0.6%,
+    rgb(143, 170, 210) 0%,
+    rgb(255, 177, 177) 150%
   );
+  opacity: 0.8;
 }
 .navbar {
   margin: 50px 0;
