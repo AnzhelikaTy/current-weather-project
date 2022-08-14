@@ -6,7 +6,7 @@ body::before {
   height: 100%;
   width: 100%;
   z-index: -1;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/043/539/original/sky_background.jpg?1660430545");
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/043/546/original/teahub.io-sky-wallpaper-full-hd-2906365.jpg?1660434320");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -22,10 +22,11 @@ div.container {
   width: 980px;
   height: 680px;
   margin: 10px auto;
-  background: radial-gradient(
-    circle at 0.4% -0.6%,
-    rgb(143, 170, 210) 0%,
-    rgb(255, 177, 177) 150%
+  background: linear-gradient(
+    109.6deg,
+    rgb(78, 112, 157) 11.2%,
+    rgb(137, 164, 199) 65%,
+    rgb(205, 213, 224) 100.2%
   );
   opacity: 0.8;
 }
@@ -35,10 +36,12 @@ div.container {
 .time {
   font-family: "Padauk", sans-serif;
   font-size: 18px;
+  color: white;
+  font-weight: bold;
 }
 #current-city {
   text-align: center;
-  color: rgb(28, 28, 77);
+  color: white;
   font-family: "Padauk", sans-serif;
   font-weight: bold;
 }
@@ -52,8 +55,7 @@ div.form-group {
 
 div.temperature {
   text-align: center;
-  opacity: 0.8;
-  color: rgb(7, 7, 77);
+  color: white;
   font-family: "Padauk", sans-serif;
   font-size: 50px;
 }
@@ -62,6 +64,7 @@ div.temperature {
   text-align: center;
   margin-top: 15px;
   font-weight: 500;
+  color: rgb(251, 251, 251);
   font-family: "Rubik", sans-serif;
 }
 .hourly-forecast {
