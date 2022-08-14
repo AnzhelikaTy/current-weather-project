@@ -6,7 +6,7 @@ div.container {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   width: 980px;
-  height: 680px;
+  height: 700px;
   margin: 10px auto;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/043/630/original/sunny_day.gif?1660508888");
   background-size: cover;
@@ -51,26 +51,6 @@ div.temperature {
   font-family: "DynaPuff", cursive;
   line-height: 30px;
 }
-.hourly-forecast {
-  text-transform: uppercase;
-  text-align: center;
-  margin-top: 60px;
-  font-family: "DynaPuff", cursive;
-  color: rgb(62, 62, 174);
-  font-weight: bold;
-}
-
-.hourly-cloud-sun,
-.hourly-cloud-bolt,
-.hourly-cloud {
-  font-size: 25px;
-  color: #007bff;
-}
-.hourly-sun {
-  color: rgb(215, 188, 54);
-  font-size: 25px;
-}
-
 .week {
   border: 1px solid transparent;
   border-radius: 10px;
@@ -81,6 +61,12 @@ div.temperature {
   font-family: "DynaPuff", cursive;
   color: rgb(62, 62, 174);
   font-weight: bold;
+}
+.tomorrow {
+  margin-top: 40px;
+}
+.aftertomorrow {
+  margin-top: 20px;
 }
 .row {
   text-align: center;
