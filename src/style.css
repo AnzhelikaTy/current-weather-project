@@ -1,12 +1,12 @@
-div.container {
+.container {
   border: 1px solid transparent;
   box-shadow: 5px 10px 20px #6285ae;
   border-radius: 20px;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  width: 980px;
-  height: 700px;
+  width: 950px;
+  height: 690px;
   margin: 10px auto;
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/043/630/original/sunny_day.gif?1660508888");
   background-size: cover;
@@ -19,6 +19,7 @@ div.container {
   font-family: "DynaPuff", cursive;
 }
 .time {
+  -webkit-text-stroke: 1px rgb(93, 147, 229);
   font-family: "DynaPuff", cursive;
   font-size: 20px;
   color: white;
@@ -28,7 +29,7 @@ div.container {
   color: rgb(70, 70, 211);
   font-family: "DynaPuff", cursive;
 }
-div.form-group {
+.form-group {
   display: block;
   margin: 0 auto;
   width: 300px;
@@ -36,7 +37,7 @@ div.form-group {
   margin-bottom: 50px;
 }
 
-div.temperature {
+.temperature {
   text-align: center;
   color: rgb(70, 70, 211);
   font-family: "DynaPuff", cursive;
@@ -45,16 +46,16 @@ div.temperature {
 
 .conditions-information {
   text-align: center;
-  margin-top: 16px;
+  margin-top: 18px;
   font-weight: 500;
   color: rgb(70, 70, 211);
   font-family: "DynaPuff", cursive;
-  line-height: 30px;
+  line-height: 40px;
 }
 .week {
   border: 1px solid transparent;
   border-radius: 10px;
-  margin-top: 30px;
+  margin-top: 55px;
 }
 .day {
   text-transform: uppercase;
@@ -62,24 +63,22 @@ div.temperature {
   color: rgb(62, 62, 174);
   font-weight: bold;
 }
-.tomorrow {
-  margin-top: 40px;
-}
+.tomorrow,
 .aftertomorrow {
-  margin-top: 20px;
-}
-.row {
-  text-align: center;
-  font-family: "Padauk", sans-serif;
+  margin: 50px auto;
+  color: rgb(37, 61, 125);
 }
 
-.sun {
-  color: rgb(215, 188, 54);
-  font-size: 40px;
+.row {
+  text-align: center;
+  font-family: "DynaPuff", cursive;
 }
-.icon {
-  color: #007bff;
-  font-size: 40px;
+
+.week {
+  display: grid;
+  row-gap: 10px;
+  color: rgb(37, 61, 125);
+  font-family: "DynaPuff", cursive;
 }
 
 footer {
@@ -88,15 +87,4 @@ footer {
   margin-bottom: 10px;
   font-family: "PT Mono", monospace;
   font-size: 18px;
-}
-.week {
-  display: grid;
-  row-gap: 10px;
-}
-.week-day:hover {
-  background: whitesmoke;
-  color: black;
-  border-radius: 20px;
-  transition: all 200ms ease-in-out;
-  cursor: pointer;
 }
