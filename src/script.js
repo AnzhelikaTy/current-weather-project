@@ -18,7 +18,7 @@ let weekDays = [
 ];
 let weekDay = weekDays[date.getDay()];
 let currentTime = document.querySelector("#current-time");
-currentTime.innerHTML = `Now at your location: ${weekDay} ${hours}:${minutes}`;
+currentTime.innerHTML = `Last Updated:  ${weekDay} ${hours}:${minutes}`;
 
 //Search engine
 let apiKey = "9538f1f913fbd8594967fe6ef9140f22";
