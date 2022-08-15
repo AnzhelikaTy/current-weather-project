@@ -12,22 +12,30 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  font-family: "DynaPuff", cursive;
 }
 
 .navbar {
   margin: 50px 0;
-  font-family: "DynaPuff", cursive;
+}
+.submit {
+  background-color: #fff !important;
+  border: 1px solid transparent !important;
+  color: #6c757d !important;
 }
 .time {
-  -webkit-text-stroke: 1px rgb(93, 147, 229);
+  -webkit-text-stroke: 1px rgb(116, 136, 166);
   font-family: "DynaPuff", cursive;
   font-size: 20px;
   color: white;
+  text-align: center;
+  font-weight: bold;
 }
 #current-city {
   text-align: center;
-  color: rgb(70, 70, 211);
-  font-family: "DynaPuff", cursive;
+  color: #fff;
+  -webkit-text-stroke: 1px rgb(57, 127, 232);
+  font-size: 50px;
 }
 .form-group {
   display: block;
@@ -39,46 +47,38 @@
 
 .temperature {
   text-align: center;
-  color: rgb(70, 70, 211);
-  font-family: "DynaPuff", cursive;
-  font-size: 50px;
+  color: #fff;
+  -webkit-text-stroke: 1px rgb(57, 127, 232);
+  font-size: 48px;
 }
 
 .conditions-information {
   text-align: center;
-  margin-top: 18px;
-  font-weight: 500;
-  color: rgb(70, 70, 211);
-  font-family: "DynaPuff", cursive;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+  -webkit-text-stroke: 1px rgb(116, 136, 166);
   line-height: 40px;
 }
 .week {
-  border: 1px solid transparent;
-  border-radius: 10px;
-  margin-top: 55px;
+  text-align: center;
+  display: grid;
+  margin-top: 10px;
+  color: #fff;
+  font-size: 20px;
 }
 .day {
   text-transform: uppercase;
-  font-family: "DynaPuff", cursive;
-  color: rgb(62, 62, 174);
+  -webkit-text-stroke: 1px rgb(57, 127, 232);
+  color: #fff;
   font-weight: bold;
 }
 .tomorrow,
 .aftertomorrow {
-  margin: 50px auto;
-  color: rgb(37, 61, 125);
-}
-
-.row {
-  text-align: center;
-  font-family: "DynaPuff", cursive;
-}
-
-.week {
-  display: grid;
-  row-gap: 10px;
-  color: rgb(37, 61, 125);
-  font-family: "DynaPuff", cursive;
+  margin: 60px auto;
+  color: #fff;
+  font-size: 20px;
 }
 
 footer {
