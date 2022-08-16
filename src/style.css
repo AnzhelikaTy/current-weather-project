@@ -51,7 +51,16 @@
   -webkit-text-stroke: 1px rgb(57, 127, 232);
   font-size: 50px;
 }
-
+.active {
+  cursor: default;
+  color: #fff;
+  -webkit-text-stroke: 1px rgb(57, 127, 232);
+}
+.active:hover {
+  text-decoration: none;
+  color: #fff;
+  -webkit-text-stroke: 1px rgb(57, 127, 232);
+}
 .conditions-information {
   text-align: center;
   margin-top: 20px;
