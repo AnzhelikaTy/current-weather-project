@@ -47,11 +47,12 @@ function showCurrentTemperature(response) {
   let wind = Math.round(response.data.wind.speed);
   let currentWind = document.querySelector("#current-wind");
   currentWind.innerHTML = `Wind: ${wind} m/s`;
-  // let iconTomorrow = document.querySelector("#icon"); //showing cuurent day weather for now!
-  // iconTomorrow.setAttribute(
-  //  "src",
-  //  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-  //icon.setAttribute("alt", response.data.weather[0].description);
+  let iconTomorrow = document.querySelector("#icon"); //showing cuurent day weather for now, however I need to display icon for tomorrow forecast
+  iconTomorrow.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  icon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(event) {
@@ -66,7 +67,7 @@ function searchCity(event) {
   let apiUrl = `${apiEndPoint}?q=${searchInput.value}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCurrentTemperature);
 }
-
+//current location
 function getCurrentTemperature(position) {
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
@@ -84,7 +85,7 @@ currentButton.addEventListener("click", function () {
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperature = document.querySelector("#current-temperature");
-  celsiusLink.classList.remove("active");
+  celsiusLink.classList.remove("active"); //switch class between °C and °F
   fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemperature);
@@ -94,7 +95,7 @@ function displayCelsiusTemperature(event) {
   event.preventDefault();
 
   let temperature = document.querySelector("#current-temperature");
-  celsiusLink.classList.add("active");
+  celsiusLink.classList.add("active"); //switch class between °C and °F
   fahrenheitLink.classList.remove("active");
   temperature.innerHTML = Math.round(celsiusTemperature);
 }
