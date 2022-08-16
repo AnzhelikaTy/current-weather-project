@@ -84,13 +84,18 @@ currentButton.addEventListener("click", function () {
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
   let temperature = document.querySelector("#current-temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
   temperature.innerHTML = Math.round(fahrenheitTemperature);
 }
 
 function displayCelsiusTemperature(event) {
   event.preventDefault();
+
   let temperature = document.querySelector("#current-temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   temperature.innerHTML = Math.round(celsiusTemperature);
 }
 let celsiusTemperature = null;
