@@ -1,3 +1,4 @@
+//displaying date&time at current location
 let date = new Date();
 let hours = date.getHours();
 if (hours < 10) {
@@ -25,9 +26,9 @@ let apiKey = "9538f1f913fbd8594967fe6ef9140f22";
 let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
 
 function showCurrentTemperature(response) {
-  let temperature = Math.round(response.data.main.temp);
+  celsiusTemperature = response.data.main.temp;
   let currentTemperature = document.querySelector("#current-temperature");
-  currentTemperature.innerHTML = `${temperature}°C`;
+  currentTemperature.innerHTML = Math.round(celsiusTemperature);
   let city = response.data.name;
   let country = response.data.sys.country;
   let yourCity = document.querySelector("#current-city");
@@ -46,6 +47,11 @@ function showCurrentTemperature(response) {
   let wind = Math.round(response.data.wind.speed);
   let currentWind = document.querySelector("#current-wind");
   currentWind.innerHTML = `Wind: ${wind} m/s`;
+  // let iconTomorrow = document.querySelector("#icon"); //showing cuurent day weather for now!
+  // iconTomorrow.setAttribute(
+  //  "src",
+  //  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  //icon.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(event) {
@@ -61,9 +67,6 @@ function searchCity(event) {
   axios.get(apiUrl).then(showCurrentTemperature);
 }
 
-let form = document.querySelector("#button-change-city");
-form.addEventListener("submit", searchCity);
-
 function getCurrentTemperature(position) {
   let lat = position.coords.latitude;
   let long = position.coords.longitude;
@@ -71,7 +74,23 @@ function getCurrentTemperature(position) {
   let apiUrl = `${apiEndPoint}?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(showCurrentTemperature);
 }
+
 let currentButton = document.querySelector("#current-button");
 currentButton.addEventListener("click", function () {
   navigator.geolocation.getCurrentPosition(getCurrentTemperature);
 });
+
+//conversion °C to °F
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperature = document.querySelector("#current-temperature");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperature.innerHTML = Math.round(fahrenheitTemperature);
+}
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let form = document.querySelector("#button-change-city");
+form.addEventListener("submit", searchCity);
