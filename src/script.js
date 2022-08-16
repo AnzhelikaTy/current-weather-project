@@ -21,6 +21,50 @@ let weekDay = weekDays[date.getDay()];
 let currentTime = document.querySelector("#current-time");
 currentTime.innerHTML = `Last Updated:  ${weekDay} ${hours}:${minutes}`;
 
+//injecting HTML for each day
+function displayForecastTwoDays() {
+  let forecastTwoDays = document.querySelector("#forecast-two-days");
+  let days = ["Tomorrow", "After tomorrow"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-auto">     
+        <div class="weather-forecast-date">${day}</div>
+       <img id="icon"src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/043/635/original/day_partial_cloud.png?1660513601"
+                                    alt="partial cloud" width="50">
+          <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 33° </span>
+          <span class="weather-forecast-temperature-min"> / 27° </span>
+        </div>
+        </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastTwoDays.innerHTML = forecastHTML;
+}
+function displayForecastWeek() {
+  let forecastWeek = document.querySelector("#forecast-week");
+  let daysWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+  let forecastHTML = `<div class="col">`;
+  daysWeek.forEach(function (daysWeek) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col">
+          <div class="weather-forecast-date">${daysWeek}</div><img id="icon"
+                                    src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/043/635/original/day_partial_cloud.png?1660513601"
+                                    alt="partial cloud" width="40">
+             <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 33° /</span>
+          <span class="weather-forecast-temperature-min">  27° </span>
+            </div>
+         </div>
+      </div>
+  `;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastWeek.innerHTML = forecastHTML;
+}
 //Search engine
 let apiKey = "9538f1f913fbd8594967fe6ef9140f22";
 let apiEndPoint = "https://api.openweathermap.org/data/2.5/weather";
@@ -109,3 +153,6 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 let form = document.querySelector("#button-change-city");
 form.addEventListener("submit", searchCity);
+
+displayForecastTwoDays();
+displayForecastWeek();

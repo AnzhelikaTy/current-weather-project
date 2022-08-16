@@ -16,7 +16,7 @@
 }
 
 .navbar {
-  margin: 50px 0;
+  margin: 40px 0;
 }
 .submit {
   background-color: #fff !important;
@@ -70,24 +70,29 @@
   -webkit-text-stroke: 1px rgb(116, 136, 166);
   line-height: 40px;
 }
-.week {
+.week,
+.days {
   text-align: center;
-  display: grid;
-  margin-top: 10px;
-  color: #fff;
-  font-size: 20px;
-}
-.day {
+  font-size: 25px;
   text-transform: uppercase;
-  -webkit-text-stroke: 1px rgb(57, 127, 232);
-  color: #fff;
-  font-weight: bold;
+  font-weight: 500;
 }
-.tomorrow,
-.aftertomorrow {
-  margin: 60px auto;
-  color: #fff;
-  font-size: 20px;
+.weather-forecast-temperature-min {
+  opacity: 0.7;
+}
+.days {
+  margin-top: 40px;
+}
+.week {
+  margin-top: 40px;
+  display: grid;
+}
+.weather-forecast-date {
+  color: white;
+  -webkit-text-stroke: 1px rgb(116, 136, 166);
+}
+.weather-forecast-temperatures {
+  color: rgb(42, 97, 181);
 }
 
 footer {
