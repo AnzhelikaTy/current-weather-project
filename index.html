@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather app</title>
-    <link rel="stylesheet" href="src/style.css">
+    <link rel="stylesheet" href="source/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/34675bc6d2.js" crossorigin="anonymous"></script>
@@ -21,51 +21,48 @@
 
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-8">
-                <div class="row g-1 justify-content-center">
-                    <nav class="navbar navbar-light justify-content-center">
-                        <form class="form-inline" id="button-change-city">
-                            <div class="col"> <input class="form-control mr-sm-2" type="search"
-                                    placeholder="Enter city..." id="search-text-input" aria-label="Search" autofocus>
-                            </div>
-                            <div class="col"><button class="btn btn-primary my-2 my-sm-0 submit" type="submit"
-                                    id="location">Search</button></div>
+        <div class="row g-1 justify-content-center">
+            <nav class="navbar navbar-light justify-content-center">
+                <form class="form-inline" id="button-change-city">
+                    <div class="col"> <input class="form-control mr-sm-2" type="search" placeholder="Enter city..."
+                            id="search-text-input" aria-label="Search" autofocus>
+                    </div>
+                    <div class="col"><button class="btn btn-primary my-2 my-sm-0 submit" type="submit"
+                            id="location">Search</button></div>
 
-                            <div class="col"><button id="current-button" type="button" class="btn btn-light">
-                                    <i class="fa-solid fa-location-arrow"></i>
-                                </button></div>
+                    <div class="col"><button id="current-button" type="button" class="btn btn-light">
+                            <i class="fa-solid fa-location-arrow"></i>
+                        </button></div>
 
-                        </form>
-                    </nav>
-                </div>
-                <div class="time" id="current-time">Sunday 14:55</div><br />
-                <h1 id="current-city">
-                    What's the weather?
-                </h1>
-
-                <div class="temperature">
-                    <span class="temp" id="current-temperature">t</span>
-                    <a href="#" class="active" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span>
-                </div>
-                <div class="conditions-information">
-                    <span class="conditions" id="current-condition">Let's see weather conditions...</span><br />
-                    <span class="feelsLike" id="current-feels-like">Feels like...</span><br />
-                    <span class="humidity" id="current-humidity">Humidity &</span>
-                    <span class="wind" id="current-wind">Wind</span>
-                </div>
-                <div class="row justify-content-center days" id="forecast-two-days">
-                </div>
-            </div>
-            <div class="col week" id="forecast-week">
-            </div>
+                </form>
+            </nav>
         </div>
+        <div class="time" id="current-time">Sunday 14:55</div><br />
+        <h1 id="current-city">
+            What's the weather?
+        </h1>
+
+        <div class="temperature">
+            <span class="temp" id="current-temperature">t</span>
+            <a href="#" class="active" id="celsius-link">°C</a> | <a href="#" id="fahrenheit-link">°F</a></span>
+        </div>
+        <div class="conditions-information">
+            <span class="conditions" id="current-condition">Let's see weather conditions...</span><br />
+            <span class="feelsLike" id="current-feels-like">Feels like...</span><br />
+            <span class="humidity" id="current-humidity">Humidity &</span>
+            <span class="wind" id="current-wind">Wind</span>
+        </div>
+
+        <div class="forecast" id="weather-forecast">
+        </div>
+
     </div>
+
     <footer><a href="https://github.com/AnzhelikaTy/current-weather-project.git" target="_blank">Open-source
             code</a> by
         <strong>Anzhelika Susemcik</strong>
     </footer>
-    <script src="src/script.js"></script>
+    <script src="source/script.js"></script>
 </body>
 
 </html>
