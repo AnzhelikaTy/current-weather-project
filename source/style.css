@@ -8,10 +8,11 @@
   width: 900px !important;
   height: 750px;
   margin: 10px auto;
+  background-image: url("https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/partly-cloudy-day.svg");
   background-color: #6db3f2;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/043/635/original/day_partial_cloud.png?1660513601");
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: 850px 520px;
   font-family: "DynaPuff", cursive;
 }
 
@@ -63,12 +64,17 @@
 }
 .conditions-information {
   text-align: center;
+  margin: 0 auto;
   margin-top: 20px;
   font-weight: bold;
   font-size: 25px;
   color: #fff;
   -webkit-text-stroke: 1px rgb(116, 136, 166);
   line-height: 40px;
+}
+.weather-image {
+  display: block;
+  margin: 65px auto;
 }
 .forecast {
   margin-top: 40px;
