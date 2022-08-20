@@ -1,0 +1,94 @@
+.container {
+  border: 1px solid transparent;
+  box-shadow: 5px 10px 20px #6285ae;
+  border-radius: 20px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 900px !important;
+  height: 750px;
+  margin: 10px auto;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/043/635/original/day_partial_cloud.png?1660513601");
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: "DynaPuff", cursive;
+}
+
+.navbar {
+  margin: 40px 0;
+}
+.submit {
+  background-color: #fff !important;
+  border: 1px solid transparent !important;
+  color: #6c757d !important;
+}
+.time {
+  -webkit-text-stroke: 1px rgb(116, 136, 166);
+  font-family: "DynaPuff", cursive;
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+#current-city {
+  text-align: center;
+  color: #fff;
+  -webkit-text-stroke: 1px rgb(57, 127, 232);
+  font-size: 50px;
+}
+.form-group {
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.temperature {
+  text-align: center;
+  color: #fff;
+  -webkit-text-stroke: 1px rgb(57, 127, 232);
+  font-size: 50px;
+}
+.active {
+  cursor: default;
+  color: #fff;
+  -webkit-text-stroke: 1px rgb(57, 127, 232);
+}
+.active:hover {
+  text-decoration: none;
+  color: #fff;
+  -webkit-text-stroke: 1px rgb(57, 127, 232);
+}
+.conditions-information {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  color: #fff;
+  -webkit-text-stroke: 1px rgb(116, 136, 166);
+  line-height: 40px;
+}
+.forecast {
+  margin-top: 40px;
+  color: white;
+  text-align: center;
+  line-height: 40px;
+}
+.forecast-date {
+  font-size: 25px;
+}
+.forecast-temperature {
+  font-size: 16px;
+}
+.forecast-temperature-min {
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-family: "PT Mono", monospace;
+  font-size: 18px;
+}
