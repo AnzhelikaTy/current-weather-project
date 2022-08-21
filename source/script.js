@@ -62,6 +62,16 @@ function displayForecast(response) {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
+function setBackgroundImage(response) {
+  let backgroundImage = document.querySelector("#background-image");
+  backgroundImage.setAttribute(
+    "style",
+    `background-image: url(http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png)`
+  );
+  backgroundImage.setAttribute("alt", response.data.weather[0].description);
+}
+
 function getForecast(coordinates) {
   let apiKey = "9538f1f913fbd8594967fe6ef9140f22";
   let forecastEndPoint = `https://api.openweathermap.org/data/2.5/onecall?`;
@@ -110,6 +120,7 @@ function showCurrentTemperature(response) {
   );
   icon.setAttribute("alt", response.data.weather[0].description);
 
+  setBackgroundImage(response);
   getForecast(response.data.coord);
 }
 
