@@ -87,9 +87,13 @@
 }
 .forecast-date {
   font-size: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.245);
+  border-radius: 30px;
 }
 .forecast-temperature {
   font-size: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.245);
+  border-radius: 30px;
 }
 .forecast-temperature-min {
   opacity: 0.8;
