@@ -175,4 +175,4 @@ celsiusLink.addEventListener("click", displayCelsiusTemperature);
 let form = document.querySelector("#button-change-city");
 form.addEventListener("submit", handleSubmit);
 
-search("Sydney");
+search("New York");
