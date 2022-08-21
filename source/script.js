@@ -132,6 +132,8 @@ function handleSubmit(event) {
     alert("Please type a city");
   }
   search(searchInput.value);
+  console.log(searchInput.value);
+  searchInput.value = "";
 }
 
 //current location
