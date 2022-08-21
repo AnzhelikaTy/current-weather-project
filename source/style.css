@@ -8,18 +8,17 @@
   width: 700px !important;
   height: 700px;
   margin: 10px auto;
-
   background-color: #6db3f2;
-
   font-family: "DynaPuff", cursive;
+  color: white;
 }
 .app {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 300px 300px;
+  background-size: 400px 400px;
 }
 .navbar {
-  margin: 40px 0;
+  margin: 30px 0;
 }
 .submit {
   background-color: #fff !important;
@@ -30,13 +29,12 @@
   -webkit-text-stroke: 1px rgb(116, 136, 166);
   font-family: "DynaPuff", cursive;
   font-size: 20px;
-  color: white;
   text-align: center;
   font-weight: bold;
 }
 #current-city {
   text-align: center;
-  color: #fff;
+
   -webkit-text-stroke: 1px rgb(57, 127, 232);
   font-size: 50px;
 }
@@ -47,10 +45,9 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
-
 .temperature {
   text-align: center;
-  color: #fff;
+
   -webkit-text-stroke: 1px rgb(57, 127, 232);
   font-size: 50px;
 }
@@ -70,17 +67,21 @@
   margin-top: 20px;
   font-weight: bold;
   font-size: 25px;
-  color: #fff;
+
   -webkit-text-stroke: 1px rgb(116, 136, 166);
   line-height: 40px;
 }
-.weather-image {
-  display: block;
-  margin: 65px auto;
+.image-humidity {
+  margin-right: -20px;
+  width: 80px;
+}
+.image-wind {
+  margin-left: 40px;
+  margin-right: -10px;
+  width: 70px;
 }
 .forecast {
-  margin-top: 60px;
-  color: white;
+  margin-top: 30px;
   text-align: center;
   line-height: 40px;
 }
@@ -88,7 +89,7 @@
   font-size: 25px;
 }
 .forecast-temperature {
-  font-size: 16px;
+  font-size: 20px;
 }
 .forecast-temperature-min {
   opacity: 0.8;
