@@ -46,10 +46,10 @@ function displayForecast(response) {
     <div class="col-2">
       <div class="forecast-date">${formatDay(forecastDay.dt)}
       </div>
-       <img
-          src="http://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon
-          }@2x.png"
+       <img src="http://openweathermap.org/img/wn/${
+         forecastDay.weather[0].icon
+       }@2x.png"
+       id="icon"
           alt=""
           width="42"
         />
@@ -67,6 +67,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 function getForecast(coordinates) {
+  let apiKey = "9538f1f913fbd8594967fe6ef9140f22";
   let forecastEndPoint = `https://api.openweathermap.org/data/2.5/onecall?`;
   let forecastUrl = `${forecastEndPoint}lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(forecastUrl).then(displayForecast);
