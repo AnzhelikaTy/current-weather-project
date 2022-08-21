@@ -94,11 +94,11 @@ function showCurrentTemperature(response) {
 
   let humidity = response.data.main.humidity;
   let currentHumidity = document.querySelector("#current-humidity");
-  currentHumidity.innerHTML = `Humidity: ${humidity}%`;
+  currentHumidity.innerHTML = `${humidity}`;
 
   let wind = Math.round(response.data.wind.speed);
   let currentWind = document.querySelector("#current-wind");
-  currentWind.innerHTML = `Wind: ${wind} m/s`;
+  currentWind.innerHTML = `${wind} m/s`;
 
   let dateElement = document.querySelector("#current-time");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
@@ -113,7 +113,7 @@ function showCurrentTemperature(response) {
   let backgroundImage = document.querySelector("#background-image");
   backgroundImage.setAttribute(
     "style",
-    `background-image: url(http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png)`
+    `background-image: url(images/${response.data.weather[0].icon}.svg)`
   );
 
   getForecast(response.data.coord);
