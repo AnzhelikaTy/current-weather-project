@@ -6,16 +6,18 @@
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   width: 700px !important;
-  height: 750px;
+  height: 700px;
   margin: 10px auto;
-  background-image: url("https://bmcdn.nl/assets/weather-icons/v3.0/fill/svg/partly-cloudy-day.svg");
+
   background-color: #6db3f2;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 850px 520px;
+
   font-family: "DynaPuff", cursive;
 }
-
+.app {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 300px 300px;
+}
 .navbar {
   margin: 40px 0;
 }
@@ -77,7 +79,7 @@
   margin: 65px auto;
 }
 .forecast {
-  margin-top: 90px;
+  margin-top: 60px;
   color: white;
   text-align: center;
   line-height: 40px;
