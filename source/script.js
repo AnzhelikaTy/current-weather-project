@@ -48,7 +48,7 @@ function displayForecast(response) {
       </div>
           <img id="icon" src="images/${
             forecastDay.weather[0].icon
-          }.svg" alt="" width="60">
+          }.svg" alt="icon" width="60">
       <div class="forecast-temperature"><span class="forecast-temperature-max">
         ${Math.round(forecastDay.temp.max)}° /</span>
         <span class="forecast-temperature-min">${Math.round(
